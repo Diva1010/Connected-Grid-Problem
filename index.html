@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Connected Grids</title>
+<script src='main.js'></script>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="header">
+            <h1> <i>Connected Grids </i></h1>
+    </div>
+    <div class="container">
+        <div class="gridDiv">
+                <div id="grid" class="grid"></div>
+        </div>
+            
+            <div class="selectorDiv">
+                <h3 style="text-align: center;">UI Panel</h3>
+                    <div class="range-slider">
+                            <label for="sizeSelector">Select Grid Size : </label>
+                            <input type="range" min="2" max="8" value="5" id="sizeSelector" class="range-slider__range" name="slider"
+                                   onchange="renderGrid(this.value)" 
+                                   oninput="updatesliderVal(this.value)" data-show-value="true">
+                                   <span id="rangeVal" name="rangeVal" class="range-slider__value">5</span>
+                            
+                        </div>
+                    <div>
+                            <label for="backGroundColor">Select Background Color : </label>
+                            <input type="color" id="backGroundColor" name="backGroundColor"
+                                   value="#800080" onchange="changeBackgroundColor(this.value)">
+                            
+                        </div>
+                    
+                        <div>
+                            <label for="hoverColor">Select Hover Color: </label>
+                            <input type="color" id="hoverColor" name="hoverColor"
+                                   value="#e36465" onchange="changeHoverColor(this.value)">
+                            
+                        </div>
+            </div>
+            
+    </div>
+    
+</body>
+</html>
